@@ -1,10 +1,10 @@
 const celdas = [];
-const RETÍCULA = 8;
+const RETÍCULA = 6;
 let ancho; //anchura de la celda
 let alto; //altura de la celda
 
 const azulejos = [];
-const NA = 18; //número de azulejos
+const NA = 21; //número de azulejos
 const reglas = [
   // reglas de los bordes de cada azulejo
   {
@@ -150,6 +150,30 @@ const reglas = [
     DOWN: 0,
     LEFT: 0,
   },
+
+  {
+    //tile 18
+    UP: 0,
+    RIGHT: 0,
+    DOWN: 0,
+    LEFT: 0,
+  },
+
+  {
+    //tile 19
+    UP: 0,
+    RIGHT: 0,
+    DOWN: 0,
+    LEFT: 0,
+  },
+
+  {
+    //tile 20
+    UP: 0,
+    RIGHT: 0,
+    DOWN: 0,
+    LEFT: 0,
+  },
 ];
 
 function preload() {
@@ -186,7 +210,7 @@ function setup() {
 }
 
 function draw() {
-  background(240, 40);
+  background(240);
 
   const celdasDisponibles = celdas.filter((celda) => {
     return celda.colapsada == false;
