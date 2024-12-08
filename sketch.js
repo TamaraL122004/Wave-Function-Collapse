@@ -5,8 +5,8 @@ let ancho; //anchura de la celda
 let alto; //altura de la celda
 const startbutton = document.getElementById("start");
 
-const azulejos = [];
-const NA = 21; //número de azulejos
+// const azulejos = [];
+// const NA = 21; //número de azulejos
 
 function preload() {
   for (let i = 0; i < NA; i++) {
