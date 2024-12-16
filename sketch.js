@@ -1,6 +1,6 @@
 const celdas = [];
 let RETICULAX = document.getElementById("cellSize").value;
-let RETICULY = RETICULAX;
+let RETICULAY = RETICULAX;
 let ancho; //anchura de la celda
 let alto; //altura de la celda
 const startbutton = document.getElementById("start");
@@ -36,7 +36,11 @@ function setup() {
 }
 
 function draw() {
-  const celdasDisponibles = celdas.filter((celda) => {
+  const celdasConOpciones = celdas.filter((celda) => {
+    return celda.opciones.length > 0;
+  });
+
+  const celdasDisponibles = celdasConOpciones.filter((celda) => {
     return celda.colapsada == false;
   });
 
@@ -61,6 +65,11 @@ function draw() {
       for (let y = 0; y < RETICULAY; y++) {
         const celdaIndex = x + y * RETICULAX;
         const celdaActual = celdas[celdaIndex];
+        if (celdaActual.opciones.length < 1) {
+          fill(104, 135, 100);
+          rect(x * ancho, y * alto, ancho);
+        }
+
         if (celdaActual.colapsada) {
           const índiceDeAzulejo = celdaActual.opciones[0];
           const reglasActuales = reglas[índiceDeAzulejo];

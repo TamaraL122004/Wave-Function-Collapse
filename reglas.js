@@ -26,6 +26,9 @@ const reglas = [
   { UP: 6, RIGHT: 6, DOWN: 6, LEFT: 6 }, //23
   { UP: 3, RIGHT: 0, DOWN: 3, LEFT: 6 }, //24
   { UP: 0, RIGHT: 0, DOWN: 0, LEFT: 0 }, //25
+  { UP: 5, RIGHT: 1, DOWN: 0, LEFT: 3 }, //26
+  { UP: 4, RIGHT: 3, DOWN: 0, LEFT: 1 }, //27
+  { UP: 6, RIGHT: 4, DOWN: 0, LEFT: 4 }, //28
 ];
 
 const NA = reglas.length; //número de azulejos
